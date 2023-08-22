@@ -1,0 +1,25 @@
+/.yarn/*
+# !/.yarn/cache
+!/.yarn/patches
+!/.yarn/plugins
+!/.yarn/releases
+!/.yarn/sdks
+!/.yarn/versions
+
+/.pnp.*
+
+lib/
+dist/
+
+node_modules/
+*.log
+.DS_Store
+
+coverage/
+.vscode/
+
+.env
+
+.idea/*
+
+.tool-versions
