@@ -2,7 +2,7 @@ import { ILinkedList, LinkedList } from "./LinkedList";
 
 export interface IQueue<T> {
     enqueue(value: T): void;
-    dequeue(): T;
+    dequeue(): T | undefined;
     isEmpty(): boolean;
 }
 
@@ -16,9 +16,9 @@ export class Queue<T> implements IQueue<T> {
         this._linkedList.append(value);
     }
 
-    dequeue(): T {
+    dequeue(): T | undefined {
         const value = this._linkedList.peek();
-        this._linkedList.delete(value);
+        if (value) this._linkedList.delete(value);
         return value;
     }
 
